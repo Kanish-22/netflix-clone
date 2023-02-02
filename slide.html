@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1><center>NETFLIX</h1>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <input type="text" placeholder="Search..">
+</div><!
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+<h2 style="text-align:center">NEW RELEASES</h2>
+
+<div class="container">
+  <div class="mySlides">
+     <div class="numbertext">1 / 6</div>
+     <img src="https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdFRSUheqxz7zLmpzm14hIuS2MlxzclZc9y5IER81x6OaTxca7lA6NZi_1Zpc6M1yA4DwQUTLUIC1qUGF-rpLhwC3zWv9cWKsO_DkXazkkVFIkKK7SfDbCUSS3vLIRXaoKJ8aw.jpg?r=326" style="width:100% ">
+   </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABV5lteI3eHet1nPBQKC_uEChESjqQfYpRwMWLR0wULt52odnxQtG69JNFDj9N4maZWJWDFZyi2sc1YzZ8mKE4Ajmt7Btva1CnWagGbYXVMp3t4OETM4LwiD70dHu-qWUbBAesQ.jpg?r=c68" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://occ-0-2482-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeO2jwed5xXhWfS0M8wx9I1VFHgUlZI-qmEJbBAJGXqQ-7SfPm5BP_zZLGBaTDnmO6hcMriYMuSREj-iEGnVG-BoGVL6vesMG0d9NjUxsGD7QcGO8imrjUsG19HyF7K9jimDaQ.jpg?r=628" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://igimages.gumlet.io/tamil/home/sinam1392022m1.jpg?w=376&dpr=2.6"style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/11/manifest-season-4-netflix-cast-social-featured.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://1739752386.rsc.cdn77.org/data/images/full/250493/all-of-us-are-dead.jpeg?w=600?w=430" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)"><</a>
+  <a class="next" onclick="plusSlides(1)">></a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdFRSUheqxz7zLmpzm14hIuS2MlxzclZc9y5IER81x6OaTxca7lA6NZi_1Zpc6M1yA4DwQUTLUIC1qUGF-rpLhwC3zWv9cWKsO_DkXazkkVFIkKK7SfDbCUSS3vLIRXaoKJ8aw.jpg?r=326" style="width:100%" onclick="currentSlide(1)" alt="Money Heist">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://occ.a.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABV5lteI3eHet1nPBQKC_uEChESjqQfYpRwMWLR0wULt52odnxQtG69JNFDj9N4maZWJWDFZyi2sc1YzZ8mKE4Ajmt7Btva1CnWagGbYXVMp3t4OETM4LwiD70dHu-qWUbBAesQ.jpg?r=c68" style="width:100%" onclick="currentSlide(2)" alt="Stranger Things">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://occ-0-2482-3663.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeO2jwed5xXhWfS0M8wx9I1VFHgUlZI-qmEJbBAJGXqQ-7SfPm5BP_zZLGBaTDnmO6hcMriYMuSREj-iEGnVG-BoGVL6vesMG0d9NjUxsGD7QcGO8imrjUsG19HyF7K9jimDaQ.jpg?r=628" style="width:100%" onclick="currentSlide(3)" alt="Wedding Season">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://igimages.gumlet.io/tamil/home/sinam1392022m1.jpg?w=376&dpr=2.6" style="width:70%" onclick="currentSlide(4)" alt="sinam">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/11/manifest-season-4-netflix-cast-social-featured.jpg" style="width:100%" onclick="currentSlide(5)" alt="Money Heist">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://1739752386.rsc.cdn77.org/data/images/full/250493/all-of-us-are-dead.jpeg?w=600?w=430" style="width:100%" onclick="currentSlide(6)" alt="All Of Us Are Dead">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">ROMANTIC</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLuZH8fkfL3zoqNuGCS6CfDUgpwTWBRul68Q&usqp=CAU" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://miro.medium.com/max/1200/0*gSsj9yr5tnY8VmNY" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/793a447bec8d230381c4b3a2dccff9c7bbaa24fd81a9a333ddd9c6d3f1d85414._UY500_UX667_RI_V_TTW_.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://qph.cf2.quoracdn.net/main-qimg-831a79ae319ce3d1655305580e87ca3f-lq" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/titanic-et00008457-03-12-2017-06-34-18.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://www.jagranimages.com/images/newimg/24072020/24_07_2020-dil_bechara2_20548298.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLuZH8fkfL3zoqNuGCS6CfDUgpwTWBRul68Q&usqp=CAU" style="width:100%" onclick="currentSlide(7)" alt="Ok Kanmani">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://miro.medium.com/max/1200/0*gSsj9yr5tnY8VmNY" style="width:80%" onclick="currentSlide(8)" alt="Sillu Karuppatti">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/793a447bec8d230381c4b3a2dccff9c7bbaa24fd81a9a333ddd9c6d3f1d85414._UY500_UX667_RI_V_TTW_.jpg" style="width:80%"  onclick="currentSlide(9)" alt="Sillunu Oru kadhal ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://qph.cf2.quoracdn.net/main-qimg-831a79ae319ce3d1655305580e87ca3f-lq" style="width:100%" onclick="currentSlide(10)" alt="Mismatched">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/titanic-et00008457-03-12-2017-06-34-18.jpg" style="width:130%" onclick="currentSlide(11)" alt="Titanic">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://www.jagranimages.com/images/newimg/24072020/24_07_2020-dil_bechara2_20548298.jpg" style="width:70%" onclick="currentSlide(12)" alt="DilBechara">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+    <footer>
+      <div class="footer__row__1">
+        <h4>Questions? Call 000-800-040-1843</h4>
+      </div>
+      <div class="footer__row__2">
+        <div class="column__1">
+          <p>FAQ</p>
+          <p>Investor Relations</p>
+          <p>Privacy</p>
+          <p>Speed Test</p>
+        </div>
+        <div class="column__2">
+          <p>Help Centre</p>
+          <p>Jobs</p>
+          <p>Cookie Preferences</p>
+          <p>Legal Notices</p>
+        </div>
+        <div class="column__3">
+          <p>Account</p>
+          <p>Ways to Watch</p>
+          <p>Corporate Information</p>
+          <p>Only on Netflix</p>
+        </div>
+        <div class="column__4">
+          <p>Media Centre</p>
+          <p>Terms of Use</p>
+          <p>Contact Us</p>
+        </div>
+      </div>
+      <div class="footer__row__3">
+        <div class="dropdown__container">
+          <i class="fas fa-globe"></i>
+          <select
+            name="languages"
+            id="languagesSelect"
+            class="language__drop__down"
+          >
+            <option value="english" selected>English</option>
+            <option value="hindi">हिन्दी</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer__row__4">
+        <p>Netflix India</p>
+      </div>
+    </footer>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
+
+    
+</body>
+</html>
+
